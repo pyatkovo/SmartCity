@@ -1,0 +1,784 @@
+.smart-city {
+    width: 100%;
+    height: 100%;
+}
+
+.hidden-menu {
+position: fixed;
+width: 70px;
+left: 0px;
+top: 0%;
+bottom: 0%;
+height: 100%;
+background: #FFFFFF;
+box-shadow: 3px 0px 15px rgba(28, 28, 35, 0.06);
+}
+
+.hidden-menu-navigate-top {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 16px;
+position: absolute;
+justify-content: center;
+width: 30px;
+height: 280px;
+left: calc(50% - 30px / 2);
+top: 11%;
+}
+
+.hidden-menu-navigate-bottom {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 0px;
+gap: 16px;
+position: absolute;
+width: 30px;
+height: 80px;
+left: calc(50% - 30px / 2);
+bottom: 8%;
+}
+
+.temperature-sensor1 {
+    margin-left: calc(70px + 4%);
+    margin-right: 4%;
+    margin-top: 40px;
+    margin-bottom: 2%;
+    padding: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 11px rgba(28, 28, 35, 0.04);
+    border-radius: 40px
+}
+
+.temperature-sensor1-title {
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+    color: #1C1C23;
+}
+
+.temperature-sensor1-content {
+    display: flex;
+    justify-content: center;
+}
+
+.temperature-sensor1-graph {
+    width: 60%;
+    display: flex;
+}
+
+.temperature-sensor1-info {
+    padding-top: 35px;
+    padding-left: 20px;
+    padding-right: 15px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.general-field {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.field-text-label {
+    width: 100%;
+    height: 100%;
+    color: #1C1C23;
+
+}
+
+.field-text-input input {
+
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+
+    text-align: right;
+    background: none;
+    color: #1C1C23;
+    font-family: Inter-Regular;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid #E8E8E9;
+}
+
+.sensors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: calc(70px + 4%);
+    margin-right: 4%;
+    margin-top: 20px;
+}
+
+.temperature-sensor2 {
+    padding: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 11px rgba(28, 28, 35, 0.04);
+    border-radius: 40px;
+    width: 49%;
+    margin-bottom: 2%;
+}
+
+.temperature-sensor2-title {
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+    color: #1C1C23;
+}
+
+.temperature-sensor2-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.door-sensor {
+    padding: 50px 50px 90px 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 11px rgba(28, 28, 35, 0.04);
+    border-radius: 40px;
+    width: 49%;
+    margin-bottom: 2%;
+}
+
+.door-sensor-title {
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+    color: #1C1C23;
+}
+
+.door-sensor-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.electric-meter-sensor {
+    padding: 50px 50px 90px 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 11px rgba(28, 28, 35, 0.04);
+    border-radius: 40px;
+    width: 49%;
+    margin-bottom: 2%;
+}
+
+.electric-meter-sensor-title {
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+    color: #1C1C23;
+}
+
+.electric-meter-sensor-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.motion-sensor {
+    padding: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 11px rgba(28, 28, 35, 0.04);
+    border-radius: 40px;
+    width: 49%;
+    margin-bottom: 2%;
+}
+
+.motion-sensor-title {
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+    color: #1C1C23;
+}
+
+.motion-sensor-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 75px;
+    height: 40px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #F1F1F1;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 36px;
+    width: 36px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #3448FF;;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(36px);
+    -ms-transform: translateX(36px);
+    transform: translateX(36px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.siren-sensor {
+    padding: 50px 50px 136px 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 11px rgba(28, 28, 35, 0.04);
+    border-radius: 40px;
+    width: 49%;
+    margin-bottom: 2%;
+    position: relative;
+
+}
+
+.siren-sensor-top {
+    padding-bottom: 40px;
+}
+
+.siren-sensor-title {
+    text-transform: uppercase;
+}
+
+.siren-sensor-switch {
+    padding: 10px 0;
+}
+
+
+.siren-sensor-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+@media (min-width: 1130px) {
+    .siren-sensor-top {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-bottom: 35px;
+    }
+
+    .siren-sensor-switch {
+        width: 50%;
+        text-align: right;
+        margin: -10px 0;
+    }
+
+    .siren-sensor-title {
+        text-transform: uppercase;
+        width: 50%;
+        color: #1C1C23;
+        padding-bottom: 0px;
+    }
+
+}
+
+.socket-sensor {
+    padding: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 11px rgba(28, 28, 35, 0.04);
+    border-radius: 40px;
+    width: 49%;
+    margin-bottom: 2%;
+}
+
+.socket-sensor-top {
+    padding-bottom: 40px;
+}
+
+.socket-sensor-title {
+    text-transform: uppercase;
+}
+
+.socket-sensor-switch {
+    padding: 10px 0;
+}
+
+.socket-sensor-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+@media (min-width: 1130px) {
+    .socket-sensor-top {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-bottom: 35px;
+    }
+
+    .socket-sensor-switch {
+        width: 50%;
+        text-align: right;
+        margin: -10px 0;
+    }
+
+    .socket-sensor-title {
+        text-transform: uppercase;
+        width: 50%;
+        color: #1C1C23;
+        padding-bottom: 0px;
+    }
+
+}
+
+@media (max-width: 1023px) {
+    .temperature-sensor1-title {
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 20px;
+        color: #1C1C23;
+    }
+
+    .temperature-sensor1-content {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+
+
+    }
+
+    .temperature-sensor1 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-left: calc(70px + 6%);
+        margin-right: 6%;
+        margin-top: 40px;
+        margin-bottom: 2%;
+        padding: 50px;
+        background: #FFFFFF;
+        box-shadow: 0px 3px 11px rgba(28, 28, 35, 0.04);
+        border-radius: 40px
+    }
+
+    .temperature-sensor1-graph {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .temperature-sensor1-info {
+        padding-top: 35px;
+        padding-left: 20px;
+        padding-right: 15px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .sensors {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: calc(70px + 4%);
+        margin-right: 4%;
+        margin-top: 20px;
+    }
+
+    .temperature-sensor2, .door-sensor, .electric-meter-sensor, .motion-sensor, .siren-sensor, .socket-sensor {
+        padding: 40px;
+        background: #FFFFFF;
+        box-shadow: 0px 3px 11px rgba(28, 28, 35, 0.04);
+        border-radius: 40px;
+        width: 100%;
+        margin-bottom: 2%;
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+    .socket-sensor{
+
+
+    }
+    .socket-sensor-top, .siren-sensor-top{
+        padding-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    
+}
+
+/*------------------------burger-menu----------------------*/
+
+.header {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    box-shadow: 0px 3px 11px rgba(28, 28, 35, 0.04);
+}
+
+.header:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    z-index: 2;
+
+}
+.header-body{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    margin: 0px 20px;
+}
+.header-logo{
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+    list-style: none;
+    text-decoration: none;
+    color: #D1D1D1;
+    font-family: Inter-Regular;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+}
+.header-menu{
+
+}
+.header-list{
+    display: flex;
+}
+.header-logo a{
+
+
+    list-style: none;
+    text-decoration: none;
+
+}
+.header-list a{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    color: #1C1C23;
+
+}
+.header-list li{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    color: #1C1C23;
+
+    padding: 5px;
+}
+.header-list img{
+    max-width: 27px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+}
+.imagess{
+    width: 100%;
+    height: 100%;
+}
+.header-link{
+   color: #1C1C23;
+    list-style: none;
+    font-size: 18px;
+    text-decoration: none;
+}
+.header-logo img{
+    max-width: 100%;
+}
+
+
+.header{
+display: none;
+}
+
+@media (max-width: 600px) {
+    .header{
+        display: flex;
+    }
+    body.lock{
+       overflow: hidden;
+    }
+    .hidden-menu {
+        display: none;
+    }
+
+    .temperature-sensor1 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 60px;
+        margin-bottom: 2%;
+        padding: 30px;
+        background: #FFFFFF;
+        box-shadow: 0px 3px 11px rgba(28, 28, 35, 0.04);
+        border-radius: 40px
+    }
+
+    .header-body {
+        height: 50px;
+    }
+    .header-list-2{
+        display: block;
+        margin-top: 70%;
+    }
+    .header-list-2 a{
+        list-style: none;
+        text-decoration: none;
+        color: #1C1C23;
+    }
+    .header-list-2 li{
+        font-family: Inter-Regular;
+        margin: 0px 0px 30px 50px;
+        display: flex;
+        align-items: center;
+        list-style: none;
+        text-decoration: none;
+        color: #1C1C23;
+
+    }
+
+
+
+    .header-burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 3;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .header-link img{
+        margin: 0px 15px;
+    }
+
+    .header-burger span {
+        position: absolute;
+        background-color: #3448FF;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+    }
+
+    .header-burger:before,
+    .header-burger:after {
+        content: '';
+        background-color: #3448FF;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+
+    }
+
+    .header-burger:before {
+        top: 0;
+    }
+
+    .header-burger:after {
+        bottom: 0;
+    }
+
+    .header-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: auto;
+        height: 100%;
+        background-color: #FFFFFF;
+        padding: 70px 0px 0px 0px;
+        top: -100%;
+        transition: all 0.4s ease 0s;
+        display: block;
+        align-items: flex-start;
+    }
+    .header-menu.active{
+        top: 0;
+    }
+
+    .header-list {
+        display: block;
+        padding-top: 100px;
+
+    }
+
+    .header-list li {
+        font-family: Inter-Regular;
+        margin: 0px 0px 30px 50px;
+
+
+    }
+    .header-burger.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+
+    }
+
+    .header-burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    .header-burger.active span {
+        transform: scale(0%);
+    }
+    .menu-logo{
+display: flex;
+        margin: 70px 0px 0px 70px;
+
+    }
+    .menu-image{
+        width: 10%;
+        height: 35px;
+    }
+    .menu-text p1{
+        width: 10%;
+        height: 30px;
+        font-family: Inter-Regular;
+        color: #B9B9B9;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 15px;
+    }
+
+/*------------------------Blocks---------------*/
+.sensors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0%;
+    margin-top: 20px;
+}
+
+
+
+    .temperature-sensor2 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background: #FFFFFF;
+        padding : 40px;
+        background: #FFFFFF;
+        box-shadow: 0px 3px 11px rgba(28, 28, 35, 0.04);
+        border-radius: 40px;
+        width: 100%;
+        margin-bottom: 2%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .temperature-sensor2, .door-sensor, .electric-meter-sensor, .motion-sensor, .siren-sensor, .socket-sensor {
+        padding: 40px;
+        background: #FFFFFF;
+        box-shadow: 0px 3px 11px rgba(28, 28, 35, 0.04);
+        border-radius: 40px;
+        width: 100%;
+        margin-bottom: 2%;
+        margin-left: 2%;
+        margin-right: 2%;
+    
+       
+    }
+    .socket-sensor-top, .siren-sensor-top{
+        padding-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    
+        
+    }
+    .temperature-sensor2-title h2, .door-sensor-title h2, .electric-meter-sensor-title h2, .motion-sensor-title h2, .siren-sensor-title h2, .socket-sensor-title h2{
+    font-size: 22px;
+    
+    }
+}
+
+
+
+
+
+

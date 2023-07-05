@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Умный город</title>
+    <link rel="stylesheet" href="smartCity.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../chartLibrary/Chart.min.css">
+    <link rel="icon" href="../images/favicon/favicon.ico" type="image/x-icon">
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+
+<header class="header">
+    <div class="header-body">
+            <a href="index.html" class="header-logo">Умный город</a>
+        <div class="header-burger">
+            <span></span>
+        </div>
+        <nav class="header-menu">
+            <div class="menu-logo">
+                <img class="menu-image" src="../images/logo/logo.svg">
+                <div class="menu-text">
+                <p1>Белорусская Государственная<br>Академия Связи</p1></div>
+            </div>
+            <ul class="header-list">
+                <li class="header-link"><img class="imagess" src="../images/default/icon_smartHome.svg"><a
+                        href="../main-page/main.html"><p>Главная</p></a>
+                </li>
+                <li class="header-link"><img src="../images/default/icon_objectState.svg"><a
+                        href="../smartCity/smartCity.html"><p>Состояние объектов</p></a>
+                </li>
+                <li class="header-link"><img src="../images/default/icon_list.svg"><a
+                        href="../admin-panel/admin.html"><p>Панель администратора</p></a>
+                </li>
+                <li class="header-link"><img src="../images/default/icon_info.svg"><a
+                        href="../smartCity/smartCity.html"><p>Помощь</p></a>
+
+            </ul>
+            <ul class="header-list-2">
+                </li>
+                <li class="header-link"><img src="../images/default/icon_user.svg"><a href="../account/account.html"><p>Профиль</p></a>
+                </li>
+                <li class="header-link"><img src="../images/default/icon_signOut.svg"><a href="../login/login.html"><p>Выход</p></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<body>
+<section class="smart-city">
+    <div class="hidden-menu">
+        <div class="hidden-menu-navigate-top">
+            <a href="../main-page/main.html"><img src="../images/default/icon_smartHome.svg" alt="Умный город"></a>
+            <a href="../smartCity/smartCity.html"><img src="../images/active/icon_objectState.svg" alt="Состояние объектов"></a>
+            <a href="../admin-panel/admin.html"><img src="../images/default/icon_list.svg" alt="Админ-панель"></a>
+            <a href="#"><img src="../images/default/icon_info.svg" alt="Инфо"></a>
+        </div>
+        <div class="hidden-menu-navigate-bottom">
+            <a href="../account/account.html"><img src="../images/default/icon_user.svg" alt="Личныый кабинет"></a>
+            <a href="../login/login.html"><img src="../images/default/icon_signOut.svg" alt="Выйти из аккаунта"></a>
+        </div>
+    </div>
+
+
+    <div class="temperature-sensor1">
+        <div class="temperature-sensor1-title">
+            <h2>Smartcom1.датчик температуры</h2>
+        </div>
+
+        <div class="temperature-sensor1-content">
+
+            <div class="temperature-sensor1-graph">
+                <canvas id="temperature-sensor1-graph"></canvas>
+            </div>
+
+            <div class="temperature-sensor1-info">
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Датчик</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="temperature-sensor1-id" type="text" value="011912916d79" readonly>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Температура</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="temperature-sensor1-value" type="text" value="23.0 ℃" readonly>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Дата выхода на&nbspсвязь</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="temperature-sensor1-date-time" type="text" value="10.11.22 11:20:12" readonly>
+                    </div>
+                </div>
+                <hr>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="sensors">
+        <div class="temperature-sensor2">
+            <div class="temperature-sensor2-title">
+                <h2>Smartcom2.датчик температуры</h2>
+            </div>
+
+            <div class="temperature-sensor2-info">
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Батарея</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="temperature-sensor2-battery" type="text" value="80.000" readonly>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Влажность, %</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="temperature-sensor2-humidity" type="text" value="47.220" readonly>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Дата сообщения</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="temperature-sensor2-date-message" type="text" value="08.11.22 13:44:12" readonly>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Качество связи</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="temperature-sensor2-quality" type="text" value="162" readonly>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Напряжение, МВ</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="temperature-sensor2-voltage" type="text" value="2900.000" readonly>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Температура</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="temperature-sensor2-value" type="text" value="24.100" readonly>
+                    </div>
+                </div>
+                <hr>
+
+            </div>
+        </div>
+
+        <div class="door-sensor">
+            <div class="door-sensor-title">
+                <h2>Smartcom2.датчик двери</h2>
+            </div>
+
+            <div class="door-sensor-info">
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Батарея</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="door-sensor-battery" type="text" value="54.000" readonly>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Датчик вскрыт</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="door-sensor-opened" type="text" value="Нет" readonly>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Дата сообщения</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="door-sensor-date-message" type="text" value="10.11.22 11:04:12" readonly>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Качество связи</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="door-sensor-quality" type="text" value="73" readonly>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Контакт</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="door-sensor-contact" type="text" value="Закрыт" readonly>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <div class="electric-meter-sensor">
+            <div class="electric-meter-sensor-title">
+                <h2>показатели электросчётчика</h2>
+            </div>
+            <div class="electric-meter-sensor-info">
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Активная мощность, КВТ</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="electric-meter-sensor-power" type="text" value="0.0" readonly>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Показания счётчика</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="electric-meter-sensor-value" type="text" value="2.9" readonly>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Вода: дата сообщения</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="electric-meter-sensor-water-date-message" type="text" value="09.11.22 12:34:12"
+                               readonly>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <div class="motion-sensor">
+            <div class="motion-sensor-title">
+                <h2>Smartcom2.датчик движения</h2>
+            </div>
+            <div class="motion-sensor-info">
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Движение</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="motion-sensor-move" type="text" value="Нет" readonly>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Датчик вскрыт</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="motion-sensor-opened" type="text" value="Нет" readonly>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Дата сообщения</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="motion-sensor-date-message" type="text" value="10.11.22 11:18:12" readonly>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Качество связи</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="motion-sensor-quality" type="text" value="76" readonly>
+                    </div>
+                </div>
+                <hr>
+
+            </div>
+        </div>
+
+        <div class="siren-sensor">
+            <div class="siren-sensor-top">
+                <div class="siren-sensor-title">
+                    <h2>Smartcom2.Сирена</h2>
+                </div>
+                <div class="siren-sensor-switch">
+                    <label class="switch">
+                        <input id="switch-siren-sensor" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="siren-sensor-info">
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Батарея</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="siren-sensor-battery" type="text" value="14.000" readonly>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Сирена состояние</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="siren-sensor-status" type="text" value="0" readonly>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Дата сообщения</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="siren-sensor-date-message" type="text" value="10.11.22 10:37:12" readonly>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Качество связи</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="siren-sensor-quality" type="text" value="73" readonly>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="socket-sensor">
+            <div class="socket-sensor-top">
+                <div class="socket-sensor-title">
+                    <h2>Smartcom2.розетка</h2>
+                </div>
+                <div class="socket-sensor-switch">
+                    <label class="switch">
+                        <input id="switch-socket-sensor" type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="socket-sensor-info">
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Дата сообщения</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="socket-sensor-date-message" type="text" value="10.11.22 11:30:12" readonly>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Качество связи</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="socket-sensor-quality" type="text" value="84" readonly>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Мощность, ВТ</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="socket-sensor-power" type="text" value="4.200" readonly>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Напряжение, МВ</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="socket-sensor-voltage" type="text" value="234.000" readonly>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Состояние</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="socket-sensor-status" type="text" value="ВКЛ"
+                               readonly>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="general-field">
+                    <div class="field-text-label">
+                        <p2>Ток, А</p2>
+                    </div>
+                    <div class="field-text-input">
+                        <input id="socket-sensor-current" type="text" value="0.010"
+                               readonly>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+</section>
+<script src="../chartLibrary/Chart.min.js"></script>
+<script src="../scripts/graph.js"></script>
+<script src="../scripts/menu.js"></script>
+</body>
+
+</html>
